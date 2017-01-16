@@ -15,7 +15,33 @@ library(V8)
 library(reshape)
 
 dashboardPage(skin = "yellow",
-              dashboardHeader(title = "Global Terrorism"),
+              dashboardHeader(title = "Global Terrorism",
+                              tags$li(class = "dropdown",
+                                      tags$a(href = "http://www.facebook.com/sharer.php?u=http://sarthakdasadia.shinyapps.io/GlobalTerrorism/", 
+                                             target = "_blank", 
+                                             tags$img(height = "20px", 
+                                                      src = "facebook.png")
+                                      )
+                              ),
+                              
+                              tags$li(class = "dropdown",
+                                      tags$a(href = "http://twitter.com/share?url=http://sarthakdasadia.shinyapps.io/GlobalTerrorism/", 
+                                             target = "_blank", 
+                                             tags$img(height = "20px", 
+                                                      src = "twitter.png")
+                                      )
+                              ),
+                              
+                              tags$li(class = "dropdown",
+                                      tags$a(href = "http://www.linkedin.com/shareArticle?mini=true&url=http://sarthakdasadia.shinyapps.io/GlobalTerrorism/", 
+                                             target = "_blank", 
+                                             tags$img(height = "20px", 
+                                                      src = "linkedin.png")
+                                      )
+                              )
+
+                              
+                              ),
               dashboardSidebar(
                 sidebarMenu(id = "sbm",
                             menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
